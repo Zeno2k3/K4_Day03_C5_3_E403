@@ -228,7 +228,7 @@ if __name__ == "__main__":
     print(f"✅ Đã tải thành công {len(tests)} Test Cases từ config/test_cases.json\n")
     
     # Câu test số 3
-    sample_query = tests[4]["question"]
+    sample_query = tests[2]["question"]
     
     print("==================================================")
     print("--- DEMO CẤP ĐỘ 1: RULE-BASED BOT (Khớp từ khóa if/else, Không dùng LLM) ---")
