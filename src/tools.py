@@ -168,14 +168,14 @@ def search_courses(query: str, department: str = None) -> dict:
                 query_lower in course["course_code"].lower()
                 or query_lower in course["name"].lower()
                 or query_lower in course["description"].lower()
-        )
-        
-        if is_match and department:
-            if department.lower() not in course["department"].lower():
-                is_match = False
-                
-        if is_match:
-            matched_courses.append(course)
+            )
+            
+            if is_match and department:
+                if department.lower() not in course["department"].lower():
+                    is_match = False
+                    
+            if is_match:
+                matched_courses.append(course)
             
         if not matched_courses:
             return {
