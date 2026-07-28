@@ -3,6 +3,7 @@
 Nơi khai báo tất cả các "món đồ nghề" mà ReAct Agent có thể gọi.
 """
 
+import datetime
 def get_weather(location: str) -> str:
     """
     Tra cứu thời tiết hiện tại của một thành phố.
@@ -40,6 +41,34 @@ def search_flights(origin: str, destination: str) -> str:
         f"1. VN123 (08:00) - Giá: 1,500,000 VNĐ (Còn vé)\n"
         f"2. VJ456 (14:30) - Giá: 1,200,000 VNĐ (Còn vé)"
     )
+
+def search_courses(query: str, department: str = None) -> dict:
+    
+    '''
+    Tìm kiếm khóa học dựa trên từ khóa và chuyên ngành.
+
+    Args:
+        query (str): Từ khóa tìm kiếm (Ví dụ: 'Python', 'Machine Learning')
+        department (str, optional): Chuyên ngành (Ví dụ: 'Công nghệ thông tin'). Defaults to None.
+        
+    Returns:
+        str: Danh sách khóa học tìm được
+    '''
+
+    return {}
+
+def get_course_details(course_code: str) -> dict:
+    
+    '''
+    Lấy thông tin chi tiết của một khóa học cụ thể.
+
+    Args:
+        course_code (str): Mã khóa học (Ví dụ: 'CS101')
+        
+    Returns:
+        dict: Thông tin chi tiết khóa học
+    '''
+    return {}
 
 
 # Danh sách các tool được đăng ký để Agent sử dụng
