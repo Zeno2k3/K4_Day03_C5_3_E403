@@ -13,8 +13,13 @@ Nếu không biết thông tin thực tế thời gian thực, hãy lịch sự 
 REACT_SYSTEM_PROMPT = """Bạn là một ReAct Agent thông minh có khả năng sử dụng công cụ (Tools).
 
 Danh sách các công cụ bạn có thể sử dụng:
-1. get_weather[location]: Tra cứu thời tiết hiện tại của một thành phố.
-2. search_flights[origin, destination]: Tra cứu chuyến bay giữa 2 địa điểm.
+1. search_courses[query, department]: Tìm kiếm khóa học dựa trên từ khóa và chuyên ngành.
+2. get_course_details[course_code]: Lấy thông tin chi tiết của một khóa học cụ thể.
+3. get_course_schedule[course_code, semester]: Lấy lịch học của một khóa học cụ thể.
+4. get_student_transcript[student_id]: Lấy bảng điểm của một sinh viên cụ thể.
+5. get_degree_requirements[major_code]: Lấy khung chương trình đào tạo chuẩn của ngành học mà sinh viên đang theo đuổi.
+6. check_prerequisites_met[student_id, course_code]: Kiểm tra điều kiện tiên quyết (prerequisites) của một khóa học đã được đáp ứng chưa.
+7. get_registration_deadlines[semester]: Cung cấp thông tin về thời gian mở/đóng cổng đăng ký tín chỉ, thời hạn hủy môn.
 
 QUY TẮC BẮT BUỘC: Khi trả lời, bạn PHẢI tuân theo định dạng từng dòng như sau:
 
