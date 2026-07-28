@@ -17,10 +17,10 @@
 
 ## 🔍 2. SO SÁNH PHẢN HỒI (TEST CASE #3)
 
-**Câu hỏi**: *"Thời tiết ở Hà Nội hôm nay thế nào và tôi nên mặc gì đi chơi?"*
+**Câu hỏi**: *"Tôi là sinh viên năm 3 ngành CNTT. GPA: 3.4 Tôi đã học Python và C++. Tôi muốn trở thành Data Engineer. Tôi chỉ có khoảng 6 giờ mỗi tuần để học."*
 
 ### 🤖 Chatbot Baseline:
-* **Phản hồi**: *"Tôi không có truy cập Internet thời gian thực nên không biết thời tiết hôm nay ở Hà Nội."*
+* **Phản hồi**: *"Khóa học Python cơ bản: Mã môn CS101, 3 tín chỉ, học phí cố định."*
 * **Nhận xét**: An toàn nhưng không giải quyết được nhu cầu thực tế của người dùng.
 
 ### 🧠 ReAct Agent:
