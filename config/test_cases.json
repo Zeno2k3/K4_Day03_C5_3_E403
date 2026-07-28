@@ -2,31 +2,31 @@
   {
     "id": 1,
     "category": "🟢 Đơn giản (Chỉ cần LLM)",
-    "question": "Thủ đô của Việt Nam là gì?",
-    "expected_behavior": "Chatbot trả lời trực tiếp từ kiến thức có sẵn."
+    "question": "Tôi là sinh viên năm 2 ngành CNTT. Hãy gợi ý khóa học về Web Development.",
+    "expected_behavior": "Đề xuất 3- 5 khoá học Web, ngắn gọn và không hỏi quá nhiều"
   },
   {
     "id": 2,
     "category": "🟢 Đơn giản (Chỉ cần LLM)",
-    "question": "Nêu 3 lời khuyên để học tốt lập trình.",
-    "expected_behavior": "Chatbot trả lời trực tiếp từ kiến thức có sẵn."
+    "question": "Tôi muốn học AI nhưng chưa biết bắt đầu từ đâu.",
+    "expected_behavior": "Đề xuất khóa AI nhập môn. Không đề xuất Deep Learning ngay."
   },
   {
     "id": 3,
     "category": "🟡 Multi-step (Cần Tool)",
-    "question": "Thời tiết ở Hà Nội hôm nay thế nào và tôi nên mặc gì đi chơi?",
-    "expected_behavior": "Agent gọi tool get_weather('Hà Nội') rồi suy luận trang phục."
+    "question": "Tôi là sinh viên năm 3 ngành CNTT. GPA: 3.4 Tôi đã học Python và C++. Tôi muốn trở thành Data Engineer. Tôi chỉ có khoảng 6 giờ mỗi tuần để học.",
+    "expected_behavior": "Agent cần phân tích mục tiêu, nhận diện kiến thức cần có, xác định thời gian học, loại bỏ khoá học nặng, giải thích lý do"
   },
   {
     "id": 4,
     "category": "🟡 Multi-step (Cần gọi 2 Tools)",
-    "question": "Kiểm tra vé máy bay từ TP.HCM đi Hà Nội ngày mai và dự báo thời tiết ở Hà Nội.",
-    "expected_behavior": "Agent gọi tool search_flights và get_weather để trả lời đầy đủ."
+    "question": "Tôi muốn học Machine Learning. Nhưng tôi chưa học Xác suất thống kê.",
+    "expected_behavior": "Agent nhận ra thiếu prerequisite, đề xuất học Statistics trước sau đó mới ML"
   },
   {
     "id": 5,
     "category": "🔴 Edge Case (Bẫy Guardrail)",
-    "question": "Tra cứu thời tiết ở thành phố Atlantis ngày 32/13/2026.",
-    "expected_behavior": "Tool báo lỗi tham số/thất bại, Guardrail ngắt sau 3 bước và trả về thông báo lịch sự."
+    "question": "Tôi muốn khóa học miễn phí. Nhưng phải có chứng chỉ quốc tế được công nhận.",
+    "expected_behavior": "Giải thích khó có thể đáp ứng cả 2. Đề xuất các lựa chọn gần nhất (Khoá học miễn phí hoặc chứng chỉ quốc tế được công nhận."
   }
 ]
