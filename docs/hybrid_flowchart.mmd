@@ -1,0 +1,39 @@
+flowchart TD
+    U([Người dùng nhập câu hỏi]) --> R{Phân loại độ phức tạp}
+
+    R -->|Đơn giản: hỏi kiến thức chung,<br/>không cần dữ liệu thực tế hoặc hành động| C
+    R -->|Phức tạp: cần dữ liệu cá nhân/thực tế,<br/>nhiều bước hoặc cần gọi tool| A
+
+    subgraph CHATBOT["Chatbot path — Baseline"]
+        direction TB
+        C[Baseline system prompt]
+        C --> L[LLM trả lời trực tiếp<br/>1 lần gọi, không dùng tool]
+    end
+
+    subgraph REACT["ReAct Agent path"]
+        direction TB
+        A[ReAct system prompt] --> T[Thought<br/>Xác định thông tin còn thiếu]
+        T --> D{Đã đủ bằng chứng<br/>để trả lời?}
+        D -->|Chưa| X[Action<br/>Chọn tool và tham số]
+        X --> G[Thực thi tool]
+        G --> O[Observation<br/>Nhận kết quả thực tế]
+        O --> T
+        D -->|Rồi| F[Final Answer<br/>Tổng hợp từ Observation]
+        T -->|Chạm MAX_ITERATIONS<br/>hoặc gặp lỗi không phục hồi| S[Safe fallback]
+    end
+
+    L --> Z([Trả kết quả cho người dùng])
+    F --> Z
+    S --> Z
+
+    classDef input fill:#E8F1FF,stroke:#2563EB,color:#172554,stroke-width:2px;
+    classDef decision fill:#FFF7D6,stroke:#D97706,color:#78350F,stroke-width:2px;
+    classDef chatbot fill:#E9FBEF,stroke:#16A34A,color:#14532D;
+    classDef react fill:#F3E8FF,stroke:#9333EA,color:#581C87;
+    classDef fallback fill:#FEECEC,stroke:#DC2626,color:#7F1D1D;
+
+    class U,Z input;
+    class R,D decision;
+    class C,L chatbot;
+    class A,T,X,G,O,F react;
+    class S fallback;
