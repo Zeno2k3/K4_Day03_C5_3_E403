@@ -71,6 +71,69 @@ def get_course_details(course_code: str) -> dict:
     return {}
 
 
+def get_course_schedule(course_code: str, semester: str) -> dict:
+    
+    '''
+    Lấy lịch học của một khóa học cụ thể.
+
+    Args:
+        course_code (str): Mã khóa học (Ví dụ: 'CS101')
+        semester (str): Học kỳ (Ví dụ: 'HK2024-2025')
+        
+    Returns:
+        dict: Lịch học chi tiết khóa học
+    '''
+    return {}
+
+def get_student_transcript(student_id: str) -> dict:
+
+    '''
+    Lấy bảng điểm của một sinh viên cụ thể.
+
+    Args:
+        student_id (str): Mã sinh viên (Ví dụ: 'SV2024-2025')
+        
+    Returns:
+        dict: Bảng điểm chi tiết sinh viên
+    '''
+    return {}
+
+def get_degree_requirements(major_code: str) -> dict:
+    '''
+    Lấy khung chương trình đào tạo chuẩn của ngành học mà sinh viên đang theo đuổi
+
+    Args:
+        major_code (str): Mã ngành học (Ví dụ: 'CS101')
+        
+    Returns:
+        dict: Khung chương trình đào tạo chuẩn
+    '''
+    return {}
+
+def check_prerequisites_met(student_id: str, course_code: str) -> bool:
+    '''
+    Kiểm tra điều kiện tiên quyết (prerequisites) của một khóa học đã được đáp ứng chưa
+
+    Args:
+        student_id (str): Mã sinh viên (Ví dụ: 'SV2024-2025')
+        course_code (str): Mã khóa học (Ví dụ: 'CS101')
+        
+    Returns:
+        dict: Kết quả kiểm tra điều kiện tiên quyết
+    '''
+    return True
+
+def get_registration_deadlines(semester: str) -> dict:
+    '''
+    Cung cấp thông tin về thời gian mở/đóng cổng đăng ký tín chỉ, thời hạn hủy môn.
+
+    Args:
+        semester (str): Học kỳ (Ví dụ: 'HK2024-2025')
+        
+    Returns:
+        dict: Hạn chót đăng ký học phần
+    '''
+    return {}
 # Danh sách các tool được đăng ký để Agent sử dụng
 AVAILABLE_TOOLS = {
     "get_weather": get_weather,
